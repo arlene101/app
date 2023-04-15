@@ -20,5 +20,6 @@ from backend_api.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', SampleView.as_view(), name = 'backend_api'),
+    # path('', SampleView.as_view(), name = 'backend_api'),
+    url(r'^',include('backend_api.urls'))
 ]
