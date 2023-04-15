@@ -18,7 +18,10 @@ from django.urls import path, include
 from django.urls import re_path as url
 from backend_api.views import *
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', SampleView.as_view(), name = 'backend_api'),
+    path('tokenn/', Token.as_view(), name='my-view'),
+    path('get-token/', Token.get_access_token, name='my-token'),
 ]
