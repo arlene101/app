@@ -21,5 +21,7 @@ from backend_api.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', SampleView.as_view(), name = 'backend_api'),
-    url(r'^',include('backend_api.urls'))
+    url(r'^',include('backend_api.urls')),
+    path('tokenn/', Token.as_view(), name='my-view'),
+    path('get-token/', Token.get_access_token, name='my-token'),
 ]
